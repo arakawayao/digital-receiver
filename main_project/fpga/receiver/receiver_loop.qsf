@@ -1,0 +1,124 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 21:52:39  October 09, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		receiver56_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY receiver_loop_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:52:39  OCTOBER 09, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_loop
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name VERILOG_FILE rtl/receiver_top.v
+set_global_assignment -name VERILOG_FILE rtl/rx_reset.v
+set_global_assignment -name VERILOG_FILE rtl/rx_capture.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frequency.v
+set_global_assignment -name VERILOG_FILE rtl/rx_nco.v
+set_global_assignment -name VERILOG_FILE rtl/rx_halfband.v
+set_global_assignment -name VERILOG_FILE rtl/rx_cic.v
+set_global_assignment -name VERILOG_FILE rtl/rx_fir.v
+set_global_assignment -name VERILOG_FILE rtl/rx_dsp.v
+set_global_assignment -name VERILOG_FILE rtl/rx_packet.v
+set_global_assignment -name VERILOG_FILE rtl/rx_fx2.v
+set_global_assignment -name VERILOG_FILE rtl/rx_fx2_duplex.v
+set_global_assignment -name VERILOG_FILE rtl/rx_usb_replay.v
+set_global_assignment -name VERILOG_FILE ip/rx_pll56.v
+set_global_assignment -name VERILOG_FILE ip/rx_pll32.v
+set_global_assignment -name VERILOG_FILE ip/rx_fifo.v
+set_global_assignment -name VERILOG_FILE ip/rx_ifclk.v
+set_global_assignment -name SDC_FILE receiver_loop.sdc
+set_location_assignment PIN_M16 -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_location_assignment PIN_M12 -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+set_location_assignment PIN_L12 -to led
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led
+set_location_assignment PIN_C16 -to usb_dq[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[0]
+set_location_assignment PIN_F13 -to usb_dq[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[1]
+set_location_assignment PIN_J11 -to usb_dq[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[2]
+set_location_assignment PIN_F14 -to usb_dq[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[3]
+set_location_assignment PIN_K11 -to usb_dq[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[4]
+set_location_assignment PIN_G11 -to usb_dq[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[5]
+set_location_assignment PIN_J14 -to usb_dq[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[6]
+set_location_assignment PIN_L11 -to usb_dq[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_dq[7]
+set_location_assignment PIN_D16 -to usb_flagb
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_flagb
+set_location_assignment PIN_F15 -to usb_flagc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_flagc
+set_location_assignment PIN_B16 -to usb_pclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pclk
+set_location_assignment PIN_N12 -to usb_rd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_rd
+set_location_assignment PIN_K12 -to usb_wr
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_wr
+set_location_assignment PIN_K15 -to usb_pa7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa7
+set_location_assignment PIN_K16 -to usb_pa6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa6
+set_location_assignment PIN_J15 -to usb_pa5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa5
+set_location_assignment PIN_J16 -to usb_pa4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa4
+set_location_assignment PIN_G16 -to usb_pa2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa2
+set_location_assignment PIN_G15 -to usb_pa1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa1
+set_location_assignment PIN_F16 -to usb_pa0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to usb_pa0
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name VERILOG_FILE rtl/receiver_loop_top.v
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_C1 -to ~ALTERA_ASDO_DATA1~
+set_location_assignment PIN_D2 -to ~ALTERA_FLASH_nCE_nCSO~
+set_location_assignment PIN_H1 -to ~ALTERA_DCLK~
+set_location_assignment PIN_H2 -to ~ALTERA_DATA0~
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

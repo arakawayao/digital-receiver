@@ -1,0 +1,49 @@
+// Five-stage CIC; R112. Integrators/comb arithmetic wraps mod 2^59.
+// The comb removes integrator wrap; output truncates toward -infinity.
+// R112 gain=17623416832; 35 growth bits plus signed24 input =>59 bits.
+module rx_cic #(parameter R=112, parameter SHIFT=42)(
+    input wire clk, input wire rst_n, input wire valid,
+    input wire signed [23:0] din, output reg signed [17:0] dout,
+    output reg out_valid, output reg clipped);
+    reg signed [58:0] integrator [0:4];
+    reg signed [58:0] delay [0:4];
+    reg signed [58:0] comb [0:4];
+    reg [4:0] comb_valid;
+    reg [6:0] count;
+    integer k;
+    wire signed [58:0] extended = {{35{din[23]}}, din};
+    wire signed [58:0] scaled = comb[4] >>> SHIFT;
+    always @(posedge clk) begin
+        if (!rst_n) begin
+            count <= 0; comb_valid <= 0; dout <= 0;
+            out_valid <= 0; clipped <= 0;
+            for (k=0;k<5;k=k+1) begin
+                integrator[k] <= 0; delay[k] <= 0; comb[k] <= 0;
+            end
+        end else begin
+            out_valid <= comb_valid[4];
+            clipped <= 0;
+            comb_valid[0] <= valid && count == R-1;
+            comb_valid[4:1] <= comb_valid[3:0];
+            if (valid) begin
+                integrator[0] <= integrator[0] + extended;
+                for (k=1;k<5;k=k+1)
+                    integrator[k] <= integrator[k] + integrator[k-1];
+                if (count == R-1) begin
+                    count <= 0;
+                    comb[0] <= integrator[4] - delay[0];
+                    delay[0] <= integrator[4];
+                end else count <= count + 1'b1;
+            end
+            for (k=1;k<5;k=k+1) if (comb_valid[k-1]) begin
+                comb[k] <= comb[k-1] - delay[k];
+                delay[k] <= comb[k-1];
+            end
+            if (comb_valid[4]) begin
+                if (scaled > 131071) begin dout <= 18'sh1ffff; clipped <= 1; end
+                else if (scaled < -131072) begin dout <= 18'sh20000; clipped <= 1; end
+                else dout <= scaled[17:0];
+            end
+        end
+    end
+endmodule

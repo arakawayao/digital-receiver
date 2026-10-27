@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "hardware_test": false,
+  "checks": {
+    "tb_frequency": "PASS",
+    "tb_am_restart": "PASS"
+  },
+  "scope": "50% AM 500 Hz, 98/103.7/99.5 MHz, 80/400/800 ADC codes; no IQ DSP/USB/audio",
+  "sources": {
+    "D:\\class_project\\main_project\\fpga\\receiver_ads807_dual\\rtl\\rx_frequency.v": "a5add5f207c6e942060054fa513e6a0e2d414cf6d3ff270e5e51117eb700da2a",
+    "D:\\class_project\\main_project\\fpga\\receiver_ads807_dual\\rtl\\rx_control.v": "1c5758e65280ad15206ff79abcf16a15061c652d64fc4a711b0ce4306cfc80df",
+    "D:\\class_project\\main_project\\fpga\\receiver_ads807_dual\\rtl\\receiver_top.v": "21e75db48eae86a3f5283ea0ccdaa41103dbc36c03d0361e197bb71f3e2aab9c",
+    "D:\\class_project\\main_project\\fpga\\receiver_ads807_dual\\tests\\tb_frequency.v": "bdb6fae4428246d74c22e36457594ee9f8d36326fdf50565bb8b936d66329205",
+    "D:\\class_project\\main_project\\host\\tests\\fpga\\tb_am_restart.v": "07ef8e387fc158bf44aea8260998e3288d65ef82dab7926a2be53c4c72d8df2d"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "ads807-host-tests",
+      "description": "PyQt6 TRI1/TCM1 two-mode GUI, protocol, DSP, records and duplex firmware-model tests; requires ads807_host dependencies",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "pytest", "host/tests", "-q", "-p", "no:cacheprovider", "--basetemp", "host/.harness/ads807_host/pytest", "--junitxml", "host/.harness/ads807_host/tests.xml"],
+      "writes": ["host/.harness/ads807_host/pytest/", "host/.harness/ads807_host/tests.xml"],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "ads807-host-offline-verification",
+      "description": "Synthetic AM/FM/noise/silence to the actual Qt GUI and capture screenshots; no USB or physical audio",
+      "depends_on": ["ads807-host-tests"],
+      "command": ["{python}", "-B", "-m", "host.ads807.verify", "--output", "host/.harness/ads807_host/verification"],
+      "writes": ["host/.harness/ads807_host/verification/"],
+      "timeout_seconds": 120
+    }
+  ]
+}

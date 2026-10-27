@@ -1,0 +1,8 @@
+PyQt6==6.7.1
+pyqtgraph==0.13.7
+numpy==1.26.4
+scipy==1.13.1
+sounddevice==0.5.1
+pythonnet==3.0.5
+pytest==8.3.5
+pytest-qt==4.4.0

@@ -1,0 +1,135 @@
+{
+  "status": "FAIL",
+  "scope": "USB upload then circular RAM playback -> dual DSP -> TRI1 USB -> production host; no physical ADC/audio",
+  "seconds_per_case": 10.0,
+  "fifo_samples": 256,
+  "replay_samples": 8192,
+  "completed": [
+    {
+      "name": "mode2_am_800",
+      "status": "PASS",
+      "upload": {
+        "samples": 8192,
+        "write_commands": 4096,
+        "crc_errors": 0,
+        "discarded_bytes": 0,
+        "frames": 4097
+      },
+      "elapsed_s": 10.0,
+      "iq_rate_hz": 500841.9,
+      "measurement": {
+        "kind": "AM",
+        "confidence": 0.9844488823726848,
+        "carrier_hz": 98002441.4029809,
+        "residual_hz": 0.4018562165932657,
+        "am_depth": 0.4998433718577402,
+        "fm_deviation_hz": null,
+        "modulation_hz": 5310.5421171189955,
+        "fm_index": null,
+        "level_dbfs": -18.405805608475426,
+        "occupied_hz": 10692.010692010694,
+        "reason": ""
+      },
+      "checks": 10,
+      "stats": {
+        "frames": 46211,
+        "bytes": 23660032,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "queue_depth": 0,
+        "queue_capacity": 128,
+        "audio_underruns": 0,
+        "audio_overruns": 0,
+        "audio_device_errors": 0,
+        "audio_startup_silence_frames": 0,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 10.375,
+        "last_valid_age_s": 0.0,
+        "decoder_message": "",
+        "epoch": 3,
+        "source": "USB",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "decode": {
+            "calls": 725,
+            "wall_s": 0.7470478999894112,
+            "cpu_s": 0.234375,
+            "max_wall_ms": 35.375499981455505
+          },
+          "dsp": {
+            "calls": 506,
+            "wall_s": 4.825861799356062,
+            "cpu_s": 1.765625,
+            "max_wall_ms": 79.74080002168193
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": {
+          "read_calls": 46276,
+          "max_read_ms": 15.9352,
+          "submit_gaps_over_512_us": 1,
+          "submit_gaps_over_1024_us": 0,
+          "write_calls": 78,
+          "max_write_ms": 22.326899983454496,
+          "clock": "Stopwatch",
+          "clock_resolution_s": 1e-07,
+          "recent_reads": [],
+          "managed_queue_dropped_bytes": 0,
+          "managed_queue_depth": 1,
+          "managed_error": "",
+          "queued_usb_requests": 128,
+          "max_requeue_ms": 0.5168
+        },
+        "tuning": {
+          "message": "手动调谐 / 信号可信",
+          "mode": 2,
+          "tuned_rf": 98002441,
+          "flags": 770,
+          "epoch": 3,
+          "config_id": 1,
+          "estimated_rf": 98002442,
+          "commands": 78,
+          "error": ""
+        }
+      }
+    },
+    {
+      "name": "mode2_am_80",
+      "status": "FAIL",
+      "reason": "TCM1 opcode=7 ACK timeout; no retry"
+    }
+  ],
+  "phase": "failed",
+  "current": {
+    "name": "mode2_am_80",
+    "mode": 2,
+    "info": {
+      "kind": "am",
+      "requested_rf_hz": 98000000,
+      "actual_rf_hz": 98002441.40625,
+      "adc_rate_hz": 43500000,
+      "iq_rate_hz": 500000,
+      "length": 8192,
+      "modulation_hz": 5310.05859375,
+      "am_depth": 0.5,
+      "fm_deviation_hz": 25000,
+      "carrier_amplitude_codes": 80,
+      "source": "USB uploaded ADC12 test RAM; physical ADC absent",
+      "device": "EP4CE6F17C8",
+      "format": "offset binary ADC12 in little-endian u16",
+      "protocol": "TRI1"
+    },
+    "sof": "D:\\class_project\\.harness\\receiver_ads807_dual\\usb_samples\\quartus\\receiver_usb_samples.sof",
+    "sof_sha256": "9401ed2a079bae3a6bf46cbaab408a1b11c9d3e879a5891d2b44409a3e05b477"
+  }
+}

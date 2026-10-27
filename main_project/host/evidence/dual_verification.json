@@ -1,0 +1,277 @@
+{
+  "status": "PASS",
+  "usb_tested": false,
+  "physical_audio_tested": false,
+  "scenarios": [
+    {
+      "source": "AM",
+      "measurement": {
+        "kind": "AM",
+        "confidence": 0.9836232298145985,
+        "carrier_hz": 100000137.01511148,
+        "residual_hz": 137.01289957649843,
+        "am_depth": 0.6002748146520102,
+        "fm_deviation_hz": null,
+        "modulation_hz": 1000.7527484080531,
+        "fm_index": null,
+        "level_dbfs": -8.375361857837314,
+        "occupied_hz": 2083.3333333333335,
+        "reason": ""
+      },
+      "stats": {
+        "frames": 2960,
+        "bytes": 1515520,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "queue_depth": 0,
+        "queue_capacity": 128,
+        "audio_underruns": 0,
+        "audio_overruns": 0,
+        "audio_device_errors": 0,
+        "audio_startup_silence_frames": 0,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 0.6720000000204891,
+        "last_valid_age_s": 0.01600000000325963,
+        "decoder_message": "",
+        "epoch": 1,
+        "source": "合成 AM",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "decode": {
+            "calls": 74,
+            "wall_s": 0.04042039962951094,
+            "cpu_s": 0.03125,
+            "max_wall_ms": 3.141599998343736
+          },
+          "dsp": {
+            "calls": 32,
+            "wall_s": 0.2230142000480555,
+            "cpu_s": 0.09375,
+            "max_wall_ms": 43.34849998122081
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": null,
+        "tuning": {
+          "message": "旧格式回放 / 合成数据",
+          "mode": null,
+          "tuned_rf": 0,
+          "flags": 0
+        }
+      },
+      "capture": "D:\\class_project\\.harness\\ads807_host\\dual_verification\\captures\\capture_20261020_132040_652149"
+    },
+    {
+      "source": "FM",
+      "measurement": {
+        "kind": "FM",
+        "confidence": 0.99,
+        "carrier_hz": 100000136.8102617,
+        "residual_hz": 136.80804980265566,
+        "am_depth": null,
+        "fm_deviation_hz": 25011.67752969708,
+        "modulation_hz": 1000.7508759031489,
+        "fm_index": 24.99291095511134,
+        "level_dbfs": -7.958736083722252,
+        "occupied_hz": 53968.25396825397,
+        "reason": ""
+      },
+      "stats": {
+        "frames": 2800,
+        "bytes": 1576960,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "queue_depth": 7,
+        "queue_capacity": 128,
+        "audio_underruns": 0,
+        "audio_overruns": 0,
+        "audio_device_errors": 0,
+        "audio_startup_silence_frames": 0,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 0.6869999999762513,
+        "last_valid_age_s": 0.030999999959021807,
+        "decoder_message": "",
+        "epoch": 1,
+        "source": "合成 FM",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "decode": {
+            "calls": 70,
+            "wall_s": 0.030225199705455452,
+            "cpu_s": 0.03125,
+            "max_wall_ms": 1.3060999917797744
+          },
+          "dsp": {
+            "calls": 30,
+            "wall_s": 0.3364551000413485,
+            "cpu_s": 0.09375,
+            "max_wall_ms": 38.485300028696656
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": null,
+        "tuning": {
+          "message": "旧格式回放 / 合成数据",
+          "mode": null,
+          "tuned_rf": 0,
+          "flags": 0
+        }
+      },
+      "capture": "D:\\class_project\\.harness\\ads807_host\\dual_verification\\captures\\capture_20261020_132043_391004"
+    },
+    {
+      "source": "无信号",
+      "measurement": {
+        "kind": "无有效信号",
+        "confidence": 0.0,
+        "carrier_hz": null,
+        "residual_hz": null,
+        "am_depth": null,
+        "fm_deviation_hz": null,
+        "modulation_hz": null,
+        "fm_index": null,
+        "level_dbfs": -120.0,
+        "occupied_hz": 0.0,
+        "reason": "幅度低于软件门限"
+      },
+      "stats": {
+        "frames": 2880,
+        "bytes": 1515520,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "queue_depth": 2,
+        "queue_capacity": 128,
+        "audio_underruns": 0,
+        "audio_overruns": 0,
+        "audio_device_errors": 0,
+        "audio_startup_silence_frames": 0,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 0.6719999999622814,
+        "last_valid_age_s": 0.0,
+        "decoder_message": "",
+        "epoch": 1,
+        "source": "合成 无信号",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "decode": {
+            "calls": 72,
+            "wall_s": 0.05230029998347163,
+            "cpu_s": 0.015625,
+            "max_wall_ms": 7.966000004671514
+          },
+          "dsp": {
+            "calls": 31,
+            "wall_s": 0.16108640003949404,
+            "cpu_s": 0.09375,
+            "max_wall_ms": 23.324400011915714
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": null,
+        "tuning": {
+          "message": "旧格式回放 / 合成数据",
+          "mode": null,
+          "tuned_rf": 0,
+          "flags": 0
+        }
+      }
+    },
+    {
+      "source": "噪声",
+      "measurement": {
+        "kind": "未知",
+        "confidence": 0.0,
+        "carrier_hz": null,
+        "residual_hz": null,
+        "am_depth": null,
+        "fm_deviation_hz": null,
+        "modulation_hz": null,
+        "fm_index": null,
+        "level_dbfs": -18.916758402127975,
+        "occupied_hz": 0.0,
+        "reason": "噪声或不支持的调制"
+      },
+      "stats": {
+        "frames": 2880,
+        "bytes": 1863680,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "queue_depth": 19,
+        "queue_capacity": 128,
+        "audio_underruns": 0,
+        "audio_overruns": 0,
+        "audio_device_errors": 0,
+        "audio_startup_silence_frames": 0,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 0.8279999999795109,
+        "last_valid_age_s": 0.014999999955762178,
+        "decoder_message": "",
+        "epoch": 1,
+        "source": "合成 噪声",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "decode": {
+            "calls": 72,
+            "wall_s": 0.10087810014374554,
+            "cpu_s": 0.046875,
+            "max_wall_ms": 23.590600001625717
+          },
+          "dsp": {
+            "calls": 31,
+            "wall_s": 0.656354500039015,
+            "cpu_s": 0.203125,
+            "max_wall_ms": 59.95450000045821
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": null,
+        "tuning": {
+          "message": "旧格式回放 / 合成数据",
+          "mode": null,
+          "tuned_rf": 0,
+          "flags": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "revision": "receiver_usb_samples",
+  "fifo_samples": 256,
+  "replay_samples": 8192,
+  "steps": {
+    "map": 0,
+    "fit": 0,
+    "sta": 0,
+    "asm": 0
+  },
+  "slacks_ns": {
+    "receiver_usb_samples_corner1_hold": 0.392,
+    "receiver_usb_samples_corner1_recovery": 17.817,
+    "receiver_usb_samples_corner1_removal": 1.147,
+    "receiver_usb_samples_corner1_setup": 1.182,
+    "receiver_usb_samples_corner2_hold": 0.381,
+    "receiver_usb_samples_corner2_recovery": 18.239,
+    "receiver_usb_samples_corner2_removal": 1.052,
+    "receiver_usb_samples_corner2_setup": 1.599,
+    "receiver_usb_samples_corner3_hold": 0.134,
+    "receiver_usb_samples_corner3_recovery": 20.614,
+    "receiver_usb_samples_corner3_removal": 0.488,
+    "receiver_usb_samples_corner3_setup": 2.979
+  }
+}

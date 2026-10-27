@@ -1,0 +1,28 @@
+{
+  "known_success": ["103.7", "91.4", "89.9", "101.7"],
+  "known_failure": ["93.4", "105.7", "90.9", "98.1"],
+  "captured_failure": {
+    "93.4": {
+      "capture": "D:/class_project/main_project/capture_20261026_181810_278439",
+      "cause": "wideband FM passed qualification but was rejected by final cv<0.12 branch",
+      "fix_status": "offline replay restored FM and nonzero audio"
+    },
+    "105.7": {
+      "capture": "D:/class_project/main_project/capture_20261026_183124_208967",
+      "cause": "envelope CV exceeds original FM gate; stable 19 kHz discriminator pilot supports FM",
+      "fix_status": "r4: 74/74 FM blocks; production replay FM and nonzero audio; awaiting RF retest"
+    },
+    "90.9": {
+      "capture": "D:/class_project/main_project/capture_20261026_183146_097221",
+      "cause": "new capture already FM with audio; independent blocks show 29 FM and 1 AM",
+      "fix_status": "user confirms intermittent playback; r5 keeps confirmed FM through transient AM candidate; offline 60 ms mute removed; RF retest pending"
+    },
+    "98.1": {
+      "capture": "D:/class_project/main_project/capture_20261026_183159_811496",
+      "cause": "unresolved: lower IQ level, stronger envelope variation, no stable stereo pilot; not proof of absent FM",
+      "fix_status": "52/52 unknown; user hears no program in forced-FM diagnostic WAV; signal-generator comparison currently unavailable; unresolved"
+    }
+  },
+  "uncaptured_failure_pending": [],
+  "hardware_retest": false
+}

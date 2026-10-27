@@ -1,0 +1,7976 @@
+{
+  "status": "PASS",
+  "project": "D:\\class_project\\main_project\\fpga\\receiver_ads807_dual",
+  "seconds": 60.0,
+  "scope": "USB control only; ADC absent; IQ ignored, no AM/FM or ADC validation",
+  "sof": "D:\\class_project\\.harness\\receiver_ads807_dual\\quartus\\receiver_ads807_dual.sof",
+  "sof_sha256": "1fa7167bb0d74f7ce7feb300d4267057a0f8b1f69a63e0f61bae6830942acc12",
+  "sources": {
+    "receiver_ads807_dual.qsf": "c0c145d02dca161e7a2dbbf406d1db89518b3efdf3828fcea424399a9be71387",
+    "receiver_ads807_dual.sdc": "6b8cab2908de1e4f7f43405274e6a014ef9bbf7e29460bedee8187bb96083012",
+    "ip\\rx_fifo.v": "6d3932fbcb76a4390f4a6ac7188b17433419d6061b81cec868d497c7658948ad",
+    "ip\\rx_ifclk.v": "3ee45b90e73f34d5f768bfaa417f28e2bd612575f28fa0f602092cde78992d4f",
+    "ip\\rx_pll_ads807.v": "2638cc1ee18f14d23348270c6cdcd7641be7eb315901092ad545e1dc0e1a5b40",
+    "rtl\\fir_coeff.hex": "fa53b5b9a3334eeb40b0b25a9323985ef86742a52a9325f4ad6729c8acd18201",
+    "rtl\\nco_sine.hex": "271e365455511b63208dafdc6c0a9cd8145abda513273d7cc55b1d5a883b0eb9",
+    "rtl\\receiver_top.v": "48242917754b130148073bc3938c730b766d14b86496340258211e881974fe32",
+    "rtl\\receiver_top_spec.md": "9aa9e9275c8941e9a0fecc4dc8ffff33761383611968eee5775f242212974311",
+    "rtl\\rx_capture.v": "83d5c5cb8c01fbc1691feb31a2b84ceab9de2b2beb3adf6d43dfcb94b9a13e90",
+    "rtl\\rx_capture_spec.md": "51c80227d43527fd68f9ea0d73ac782cb1a0a4ba35d80d66a135cad0261604a7",
+    "rtl\\rx_cic.v": "c8cdf87545d1f68bb78975038f66114bc03067e57bc7f27a07d63f50b1d8b629",
+    "rtl\\rx_cic_spec.md": "f1711b9e6446299c50e5b4f8d6b218b566fb1b8a31cfb67ae764321c44e03fdb",
+    "rtl\\rx_command.v": "38958d7657e28d90548cce8e4b9decd28755e59ac7f0197fb297ae59293fa0be",
+    "rtl\\rx_command_spec.md": "92ab8098f6fd02d50a048d148b54f46d549cd431198479f2cdd7275959a3b93e",
+    "rtl\\rx_control.v": "352ffe18716f5f97101c01f372c02499288691984122db0bc2575c1861b6d214",
+    "rtl\\rx_control_spec.md": "5f071a85af55ddfafff27ebb18c99bf149feb759aae0051bc6c693e2845f8bcb",
+    "rtl\\rx_dsp.v": "900418d8f737c2adb1dfe976d042b889cb63479ec52ad3b4dc24c884759f084c",
+    "rtl\\rx_dsp_spec.md": "7677e4ab196adaad692dc3aa0c9d1adb7879146ae7841dc839c0a81cbcefcf27",
+    "rtl\\rx_fifo_tri.v": "571698e00747811bd8d322f3cafdb270e268463286087fceed46346979df6549",
+    "rtl\\rx_fifo_tri_spec.md": "5f31d232722a6753413743cbd6bc98556731d3f56e5521760ce8e602b5e4d607",
+    "rtl\\rx_fir.v": "ac97f0a1e6af6a15e50cc2b0190ca116689350cf507fe6faf80b9a838fbc7c0e",
+    "rtl\\rx_fir_spec.md": "62ece316b4fe86a98a6229f92182beb1c8ed09686d0ba28db858d61801bc346f",
+    "rtl\\rx_frequency.v": "08bdef5341465ebad10d5d69beba0cd2b38c85361578cb09e79657981b14df3d",
+    "rtl\\rx_frequency_spec.md": "5ceca135335a9f9c3e07be7e7d16d15b18263e1b72167be73f1b1ccb8a7bb5ff",
+    "rtl\\rx_fx2_tri.v": "8465a65914af39b5e565786fdb2e1861679f9473232fea98cffc4397026ee81b",
+    "rtl\\rx_fx2_tri_spec.md": "c4c84d8ad3246118b784a8462cec4e16dc2023e35b3fa84844c05b923341e78b",
+    "rtl\\rx_mailbox.v": "73e5cfe9dbb99a44259c7d4a0df4043a1ed9390338e11385244935d03a555d82",
+    "rtl\\rx_mailbox_spec.md": "a129d6068471190037a79448817724c63e739946be08263b5ea4da6ff5316c7e",
+    "rtl\\rx_nco.v": "b61ae00a00aaf67870285fd5b71ac6338e20fd71d156f2ac0f1e579269c6dc23",
+    "rtl\\rx_nco_spec.md": "1a7b1198bb01b07136a852f326dca61d79301a87035b91aba8a560323b6d171e",
+    "rtl\\rx_reset.v": "da4de6ecef57ad0997d111ac9b44548bc88053b0805e2f3630c7411c2d62c502",
+    "rtl\\rx_reset_spec.md": "a52eb60e10faa8cc4943fe7d9be4281cc7416e1b60ae2f5b95a0348ba5aeb8c5",
+    "rtl\\rx_tri_packet.v": "6ee53561979b506035acbe716b09fa5ce56e79d2d0633f58093bd182a3ce3315",
+    "rtl\\rx_tri_packet_spec.md": "98ac777122991e252032eaf062f67545d7213e7bc1a5849c982e4f29ab1dfacd",
+    "rtl\\rx_tuning_divider.v": "327ab7a2f7669c2d2bdc4e2f4573affae64ccf443f939d7e9906c32780c83d9b",
+    "rtl\\rx_tuning_divider_spec.md": "71370b32e6c3da6e601b6206c59cceef55427d44158a553e9ee3413dbfa4aa30"
+  },
+  "elapsed_seconds": 60.16567519999808,
+  "commands": [
+    {
+      "ack": {
+        "sequence": 1551667473,
+        "opcode": 7,
+        "error": 0,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 1,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 52.67730000196025,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667474,
+        "opcode": 2,
+        "error": 0,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 39.247100008651614,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667475,
+        "opcode": 3,
+        "error": 5,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.501400014851242,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667476,
+        "opcode": 2,
+        "error": 4,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.116899976041168,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667477,
+        "opcode": 4,
+        "error": 3,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.760799989569932,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667478,
+        "opcode": 6,
+        "error": 3,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.816599970217794,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667479,
+        "opcode": 1,
+        "error": 1,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.176799966488034,
+      "corruption": "crc"
+    },
+    {
+      "ack": {
+        "sequence": 1551667480,
+        "opcode": 1,
+        "error": 2,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.73420000914484,
+      "corruption": "reserved"
+    },
+    {
+      "ack": {
+        "sequence": 1551667481,
+        "opcode": 8,
+        "error": 4,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.73290002066642,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667482,
+        "opcode": 8,
+        "error": 0,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 2,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 50.575200002640486,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667483,
+        "opcode": 7,
+        "error": 0,
+        "mode": 1,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 3,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4097,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 40.29080003965646,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667484,
+        "opcode": 2,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 4,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.801700009964406,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667485,
+        "opcode": 3,
+        "error": 4,
+        "mode": 2,
+        "tuned_rf": 0,
+        "phase_step": 0,
+        "epoch": 4,
+        "config_id": 0,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.11799999512732,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667486,
+        "opcode": 3,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 88000000,
+        "phase_step": 98734880,
+        "epoch": 5,
+        "config_id": 1,
+        "sample_index": 0,
+        "flags": 4354,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 16.37899997876957,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667487,
+        "opcode": 3,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 98000000,
+        "phase_step": 1086083684,
+        "epoch": 6,
+        "config_id": 2,
+        "sample_index": 0,
+        "flags": 4354,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 12.705500004813075,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667488,
+        "opcode": 3,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 7,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4354,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 15.328500012401491,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667489,
+        "opcode": 5,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 7,
+        "config_id": 3,
+        "sample_index": 8356,
+        "flags": 258,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 10.722999984864146,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667490,
+        "opcode": 7,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 36.77240002434701,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667491,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.11350001906976,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667492,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.798599997069687,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667493,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 28.298299992457032,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667494,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.51960000488907,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667495,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.7578000142239,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667496,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.462699989788234,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667497,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.16280001308769,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667498,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.1925000064075,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667499,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.360400015022606,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667500,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.99220002675429,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667501,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.508499978575855,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667502,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.53650001715869,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667503,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.57750003831461,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667504,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.554699981119484,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667505,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.097700004465878,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667506,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.37309999531135,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667507,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 27.354299963917583,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667508,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.471900001633912,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667509,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.661399989388883,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667510,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.924299953971058,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667511,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.612500013783574,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667512,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.296400004066527,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667513,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.642199959605932,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667514,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.916200008708984,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667515,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.571900006383657,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667516,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.905699997674674,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667517,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.665199970826507,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667518,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.859599995892495,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667519,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.94309998070821,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667520,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.040800036862493,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667521,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 40.2847999939695,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667522,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.000400009565055,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667523,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.27280003577471,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667524,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.22949999710545,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667525,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.873100019060075,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667526,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.64529997250065,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667527,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.828699972014874,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667528,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.31420001247898,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667529,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.447899993509054,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667530,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.200199970044196,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667531,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.258299994282424,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667532,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.963100016582757,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667533,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.923599996138364,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667534,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.53429995290935,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667535,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 52.56390001159161,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667536,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.48830001009628,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667537,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.43980002682656,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667538,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.803800025954843,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667539,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.29570004623383,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667540,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.15570002794266,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667541,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.95070002786815,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667542,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.731099996250123,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667543,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.0443999953568,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667544,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.30349997850135,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667545,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.351700017694384,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667546,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.762099988758564,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667547,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.8888000221923,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667548,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.497699975967407,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667549,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 35.32619995530695,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667550,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.0066999993287,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667551,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.06579998368397,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667552,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.99210000457242,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667553,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.55629999330267,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667554,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.498300038743764,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667555,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.385299993213266,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667556,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 45.15319998608902,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667557,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.424299988429993,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667558,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.376900013536215,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667559,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.904199996963143,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667560,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.560700048226863,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667561,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.327899952884763,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667562,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.76930003287271,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667563,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 53.67249995470047,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667564,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.41939999861643,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667565,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.62930003600195,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667566,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.41159998672083,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667567,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.553099990356714,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667568,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.39539999049157,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667569,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.92109998781234,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667570,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 48.47520001931116,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667571,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.711800013203174,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667572,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.46319998288527,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667573,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.348699984140694,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667574,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.3733999975957,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667575,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.982700001914054,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667576,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.832600012421608,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667577,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.11079997709021,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667578,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.99509997991845,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667579,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.7448999742046,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667580,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.087899977341294,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667581,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 36.842099973000586,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667582,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.374000002164394,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667583,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.02210000017658,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667584,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 49.61050004931167,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667585,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.37430000444874,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667586,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.988600014708936,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667587,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.833200016990304,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667588,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.788599968422204,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667589,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.860099988989532,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667590,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.667200044263154,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667591,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.138400001917034,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667592,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.466899974271655,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667593,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.121400010306388,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667594,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.985800004098564,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667595,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 26.222100015729666,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667596,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.12240000721067,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667597,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.46660000877455,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667598,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.665399961639196,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667599,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.283600012306124,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667600,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.90780005045235,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667601,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.155799981206656,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667602,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 27.127099980134517,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667603,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.231099983211607,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667604,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.495400005951524,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667605,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.042100046761334,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667606,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.493800004478544,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667607,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.92819997295737,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667608,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.511199951637536,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667609,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 28.15790002932772,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667610,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.714499975554645,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667611,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.93450002092868,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667612,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.18019997095689,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667613,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.80899999663234,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667614,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.720200029667467,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667615,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.87190000992268,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667616,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 28.162700007669628,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667617,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.536799961235374,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667618,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.905399984680116,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667619,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.274200009647757,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667620,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.995000026654452,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667621,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.408799986820668,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667622,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.51519998209551,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667623,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.70900001330301,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667624,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.42910003568977,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667625,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.45340002467856,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667626,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 47.935099981259555,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667627,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.11400000145659,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667628,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.655300001148134,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667629,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.350100042298436,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667630,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.7701999922283,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667631,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.24749997025356,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667632,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 37.51250001369044,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667633,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 49.989799968898296,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667634,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.32110001752153,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667635,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.384500034619123,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667636,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.473400013055652,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667637,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.58160001132637,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667638,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.12599997641519,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667639,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.976200010627508,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667640,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 58.19099996006116,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667641,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.259800005704165,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667642,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.52690001297742,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667643,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.71199997793883,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667644,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.396300008054823,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667645,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.862500007264316,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667646,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.651899975258857,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667647,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 35.61339998850599,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667648,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.51430002273992,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667649,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.955999973230064,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667650,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.57859997777268,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667651,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.05460001481697,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667652,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.57890000147745,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667653,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.864199962001294,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667654,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 51.114499976392835,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667655,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.70609998051077,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667656,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.932500005699694,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667657,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.482300022616982,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667658,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.29749999102205,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667659,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.585899996571243,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667660,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.302099989261478,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667661,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 28.313100046943873,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667662,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.31390001019463,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667663,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.560599967837334,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667664,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.24809997482225,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667665,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.117599981371313,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667666,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.107400020118803,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667667,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.0993999959901,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667668,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.852300046011806,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667669,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.418200010899454,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667670,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.00409997953102,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667671,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.5594000169076,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667672,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.44980000797659,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667673,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.88089999416843,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667674,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.08750002179295,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667675,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 40.035199956037104,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667676,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.098200008273125,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667677,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.313200004864484,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667678,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.82330001052469,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667679,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.732400016859174,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667680,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.43680001469329,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667681,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.0814000335522,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667682,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 38.65780000342056,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667683,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.3880000137724,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667684,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.89600001880899,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667685,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.65750000718981,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667686,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.62339999107644,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667687,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.278899987228215,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667688,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.51420002197847,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667689,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.55360002024099,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667690,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.0757000008598,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667691,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.37310000602156,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667692,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.507099978625774,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667693,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.58930002246052,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667694,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.816999951843172,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667695,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.172599992714822,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667696,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 51.6762999468483,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667697,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.550400017295033,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667698,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.198999960906804,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667699,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.02460001921281,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667700,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.39499999815598,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667701,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 34.33160000713542,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667702,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.730599992442876,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667703,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 53.037900011986494,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667704,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.75079997163266,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667705,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.48900000471622,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667706,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.121899992693216,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667707,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.277699988801032,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667708,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.56670001428574,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667709,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.258300052490085,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667710,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 50.84390001138672,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667711,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.3284999942407,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667712,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.361900015734136,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667713,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.37730002729222,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667714,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.48270001495257,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667715,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.44590002577752,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667716,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.62040001573041,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667717,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.59980005491525,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667718,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.34959998028353,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667719,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.047700031194836,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667720,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.00680000009015,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667721,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.317799992393702,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667722,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.10370003944263,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667723,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.867099994793534,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667724,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 54.119099979288876,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667725,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.07829996244982,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667726,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.742600014898926,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667727,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.044600007589906,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667728,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.339899986051023,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667729,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.843799981288612,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667730,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.41880000475794,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667731,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 56.90729996422306,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667732,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.07229998568073,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667733,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.514799979049712,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667734,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.490700017660856,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667735,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.933399975765496,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667736,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.03659999417141,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667737,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.744400028605014,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667738,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 36.871900025289506,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667739,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.81510004308075,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667740,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.927999992854893,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667741,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.377100036479533,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667742,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.63379999063909,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667743,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.41599996201694,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667744,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.339699973817915,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667745,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 42.14099998353049,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667746,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.290900009684265,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667747,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.37730002729222,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667748,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.514700025785714,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667749,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.241699995007366,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667750,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.987500027753413,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667751,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.42390003288165,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667752,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.50010002031922,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667753,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.00130000570789,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667754,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.17589995963499,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667755,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.468899978790432,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667756,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.2545999661088,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667757,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.17730001779273,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667758,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.525099977850914,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667759,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 35.8356999931857,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667760,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.266900012269616,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667761,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.401699990965426,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667762,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.16839996073395,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667763,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.084900012705475,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667764,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.62379998341203,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667765,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.696799967903644,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667766,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 36.820199980866164,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667767,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.78349998779595,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667768,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.742199964355677,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667769,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.56990000186488,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667770,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.608200049959123,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667771,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.71130000939593,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667772,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.956100021488965,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667773,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 53.097099997103214,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667774,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.71679998235777,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667775,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.046600012108684,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667776,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.361999968998134,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667777,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.55689999787137,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667778,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.448800000362098,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667779,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.62519999407232,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667780,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 48.5136000206694,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667781,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.17790002236143,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667782,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.357700005173683,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667783,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.618299999739975,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667784,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.27639996819198,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667785,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.290700008161366,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667786,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.754800038877875,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667787,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.584500022698194,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667788,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.068700005766004,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667789,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.13639998668805,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667790,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.431499985046685,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667791,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.07970002060756,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667792,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.042000035289675,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667793,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.415300014894456,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667794,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 49.5315000298433,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667795,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.63179998612031,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667796,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.366500003263354,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667797,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.40540001913905,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667798,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.732400006148964,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667799,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.71489996789023,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667800,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.670399999711663,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667801,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 50.75860000215471,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667802,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.330900012515485,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667803,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.05449996655807,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667804,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.81150002637878,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667805,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.031399965286255,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667806,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.27830003015697,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667807,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.28839999064803,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667808,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 50.78079999657348,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667809,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.19399997033179,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667810,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.978500028140843,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667811,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.03509998274967,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667812,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.901200032327324,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667813,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.63880002871156,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667814,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.486299984157085,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667815,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 48.29990002326667,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667816,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.254100009799004,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667817,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.71229998022318,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667818,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.434200005605817,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667819,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.86649997951463,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667820,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.14480005064979,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667821,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.616699998266995,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667822,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 57.41999996826053,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667823,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.779800007119775,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667824,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.205099996645004,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667825,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.64860005583614,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667826,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.041600042954087,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667827,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.318599998485297,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667828,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.35550003591925,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667829,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 35.083399969153106,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667830,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.24690004531294,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667831,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.87810000963509,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667832,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.219399999827147,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667833,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.59369998704642,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667834,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.27969997189939,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667835,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.231199973262846,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667836,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.27390001807362,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667837,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.2061000042595,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667838,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.87379997689277,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667839,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.798799977172166,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667840,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 26.07159997569397,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667841,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.018199970480055,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667842,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.939700013026595,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667843,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.936999992467463,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667844,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.57729997858405,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667845,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.97880001971498,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667846,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.39489998668432,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667847,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 41.61980003118515,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667848,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.272799998987466,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667849,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.271899992134422,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667850,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 64.69369999831542,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667851,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.858199963811785,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667852,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.06660003727302,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667853,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.50639997329563,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667854,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.244800018612295,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667855,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.317299977876246,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667856,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.80140000768006,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667857,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.60519994748756,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667858,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.829999992623925,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667859,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.6144999708049,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667860,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.013400002848357,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667861,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.40979999443516,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667862,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.628899985458702,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667863,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.05000003799796,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667864,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 44.42759999074042,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667865,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.424199998378754,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667866,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.22330001881346,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667867,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.705500034149736,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667868,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.930700002703816,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667869,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.749899975489825,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667870,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.055199950467795,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667871,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 43.87489997316152,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667872,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.47960000205785,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667873,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.732199957128614,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667874,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.64839999610558,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667875,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.436999979428947,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667876,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.471499998588115,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667877,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.21749998535961,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667878,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 61.40679999953136,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667879,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.95360000245273,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667880,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.916100018657744,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667881,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.13290002895519,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667882,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.22949999710545,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667883,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.94770001573488,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667884,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.69889997318387,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667885,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 26.355099980719388,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667886,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.03550004400313,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667887,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.697099970187992,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667888,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.93900000769645,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667889,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.98060002271086,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667890,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.46750000491738,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667891,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.56159996474162,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667892,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 28.88979995623231,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667893,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.46050000982359,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667894,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.49279997544363,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667895,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.49000002304092,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667896,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.9943000106141,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667897,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.08460001042113,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667898,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.491400022991,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667899,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 27.844499971251935,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667900,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.59769994858652,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667901,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.58629999961704,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667902,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.60219999356195,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667903,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.548600003588945,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667904,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 29.983999964315444,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667905,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.13000000687316,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667906,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 28.914199967402965,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667907,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 33.2104999688454,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667908,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.581400020513684,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667909,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 30.76570003759116,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667910,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.638700049370527,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667911,
+        "opcode": 1,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 8,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 31.493500049691647,
+      "corruption": null
+    },
+    {
+      "ack": {
+        "sequence": 1551667912,
+        "opcode": 7,
+        "error": 0,
+        "mode": 2,
+        "tuned_rf": 108000000,
+        "phase_step": 2073432488,
+        "epoch": 9,
+        "config_id": 3,
+        "sample_index": 0,
+        "flags": 4098,
+        "estimated_rf": 0,
+        "hold_ms": 500
+      },
+      "elapsed_ms": 32.48710004845634,
+      "corruption": null
+    }
+  ],
+  "frames": 700,
+  "ignored_iq_frames": 260,
+  "max_ack_ms": 64.69369999831542,
+  "crc_errors": 0,
+  "discarded_bytes": 0,
+  "completed_local": "2026-10-20T16:24:59.770566+08:00"
+}

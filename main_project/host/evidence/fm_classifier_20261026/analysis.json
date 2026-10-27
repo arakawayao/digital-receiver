@@ -1,0 +1,51 @@
+{
+  "scope": "Real saved IQ offline analysis and actual file-replay pipeline, not new RF or physical speaker validation",
+  "captures": [
+    {
+      "capture": "capture_20261026_164238_735271",
+      "rf_hz": 103700000,
+      "sha256": "6be0677b7159aebcec8c1ad8e146e9d1e720046672ddcbed29725aae5ebfbeef",
+      "classifications_40ms": {
+        "FM": 99
+      },
+      "original_audio_zero_fraction": 0.005029548598013328
+    },
+    {
+      "capture": "capture_20261026_165140_813586",
+      "rf_hz": 103700000,
+      "sha256": "a067e08700d39b4c59bb148a2124917b94c8b4f9f056b3e844f206aad5e8517f",
+      "classifications_40ms": {
+        "FM": 100
+      },
+      "original_audio_zero_fraction": 0.0
+    },
+    {
+      "capture": "capture_20261026_165226_885213",
+      "rf_hz": 103700000,
+      "sha256": "193375f1107f093a7ee35228544d5e2e65a1bd4e20c9a279ef7184fe67e3c1ba",
+      "classifications_40ms": {
+        "FM": 100
+      },
+      "original_audio_zero_fraction": 0.0
+    },
+    {
+      "capture": "capture_20261026_181810_278439",
+      "rf_hz": 93400000,
+      "sha256": "90dc698fad448fef6f5324dff3ed8180be2db7c42b55301b3efad3c5bb353daf",
+      "classifications_40ms": {
+        "FM": 22
+      },
+      "original_audio_zero_fraction": 1.0,
+      "recovered_audio_rms": 0.3192906081676483,
+      "recovered_audio_zero_fraction": 0.022632435108564962
+    }
+  ],
+  "transport_replay": {
+    "kind": "FM",
+    "audio_rms": 0.31994593143463135,
+    "processed_samples": 984025,
+    "crc_errors": 0,
+    "error": ""
+  },
+  "hardware_retest": false
+}

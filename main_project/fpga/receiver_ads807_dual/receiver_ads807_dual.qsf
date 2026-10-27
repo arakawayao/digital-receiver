@@ -1,0 +1,97 @@
+set_global_assignment -name FAMILY "Cyclone IV E"
+# User-confirmed device and complete P3 ADC wiring.
+set_global_assignment -name DEVICE EP4CE6F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY receiver_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY "D:\\class_project\\main_project\\fpga\\receiver_ads807_dual"
+set_global_assignment -name OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name VERILOG_FILE rtl/receiver_top.v
+set_global_assignment -name VERILOG_FILE rtl/rx_sample_replay.v
+set_global_assignment -name VERILOG_FILE rtl/rx_capture.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frequency.v
+set_global_assignment -name VERILOG_FILE rtl/rx_nco.v
+set_global_assignment -name VERILOG_FILE rtl/rx_cic.v
+set_global_assignment -name QIP_FILE ip/cic_intel/synth/rx_cic_intel_core.qip
+set_global_assignment -name VERILOG_FILE rtl/rx_fir.v
+set_global_assignment -name VERILOG_FILE rtl/rx_dsp.v
+set_global_assignment -name VERILOG_FILE rtl/rx_reset.v
+set_global_assignment -name VERILOG_FILE rtl/rx_command.v
+set_global_assignment -name VERILOG_FILE rtl/rx_control.v
+set_global_assignment -name VERILOG_FILE rtl/rx_mailbox.v
+set_global_assignment -name VERILOG_FILE rtl/rx_tri_packet.v
+set_global_assignment -name VERILOG_FILE rtl/rx_fx2_tri.v
+set_global_assignment -name VERILOG_FILE rtl/rx_fifo_tri.v
+set_global_assignment -name VERILOG_FILE ip/rx_pll_ads807.v
+set_global_assignment -name VERILOG_FILE ip/rx_ifclk.v
+set_global_assignment -name SDC_FILE receiver_ads807_dual.sdc
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[0]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[1]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[2]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[3]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[4]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[5]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[6]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to usb_dq[7]
+source board_pins.tcl
+# Source: user-provided P3 schematic and wiring order, 2026-10-20.
+# P3 odd pins 3..29: OTR, ADC bits 11 down to 0, then ADC clock.
+set_location_assignment PIN_T13 -to adc_data[11]
+set_location_assignment PIN_T12 -to adc_data[10]
+set_location_assignment PIN_R14 -to adc_data[9]
+set_location_assignment PIN_T11 -to adc_data[8]
+set_location_assignment PIN_P8 -to adc_data[0]
+set_location_assignment PIN_K10 -to adc_data[1]
+set_location_assignment PIN_M9 -to adc_data[2]
+set_location_assignment PIN_N9 -to adc_data[3]
+set_location_assignment PIN_P11 -to adc_data[4]
+set_location_assignment PIN_R7 -to adc_data[5]
+set_location_assignment PIN_T9 -to adc_data[6]
+set_location_assignment PIN_T10 -to adc_data[7]
+set_location_assignment PIN_L7 -to adc_clk
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[11]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[10]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[9]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[8]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[0]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[1]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[2]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[3]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[4]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[5]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[6]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_data[7]
+set_instance_assignment -name VIRTUAL_PIN OFF -to adc_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_clk
+
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+
+
+set_global_assignment -name CDF_FILE ../../../.harness/receiver_ads807_dual/quartus/Chain3.cdf
+
+
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

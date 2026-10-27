@@ -1,0 +1,82 @@
+// FX2 EP2 IN, fixed 24 MHz inverted IFCLK. FLAGB is registered before use.
+module rx_fx2(
+    input wire clk,
+    input wire rst_n,
+    input wire pause,
+    input wire flagb,
+    inout wire [7:0] dq,
+    output wire ifclk,
+    output wire slcs_n,
+    output wire slrd_n,
+    output wire slwr_n,
+    output wire sloe_n,
+    output wire a0,
+    output wire a1,
+    output wire pktend_n,
+    output wire pa0,
+    input wire [7:0] tx_data,
+    input wire tx_valid,
+    output wire tx_ready
+);
+    localparam SETTLE = 0;
+    localparam WRITE = 1;
+    localparam WRITE_GUARD = 2;
+    reg [1:0] state;
+    reg [2:0] wait_count;
+    reg [7:0] data_q;
+    reg wr_q;
+    reg flagb_q;
+    rx_ifclk clock_forward(
+        .datain_h(1'b0), .datain_l(1'b1), .outclock(clk),
+        .outclocken(1'b1), .dataout(ifclk)
+    );
+    assign slcs_n = !rst_n;
+    assign slwr_n = wr_q;
+    assign slrd_n = 1'b1;
+    assign sloe_n = 1'b1;
+    assign a0 = 1'b0;
+    assign a1 = 1'b0;
+    assign pktend_n = 1'b1;
+    assign pa0 = 1'b1;
+    assign dq = rst_n ? data_q : 8'bz;
+    assign tx_ready = rst_n && !pause && state == WRITE && flagb_q;
+    always @(posedge clk) begin
+        if (!rst_n) begin
+            state <= SETTLE;
+            wait_count <= 0;
+            data_q <= 0;
+            wr_q <= 1;
+            flagb_q <= 0;
+        end else begin
+            wr_q <= 1;
+            flagb_q <= flagb;
+            if (pause) begin
+                state <= SETTLE;
+                wait_count <= 0;
+            end else begin
+                case (state)
+                    SETTLE: begin
+                        if (wait_count == 3) begin
+                            state <= WRITE;
+                        end else begin
+                            wait_count <= wait_count + 1'b1;
+                        end
+                    end
+                    WRITE: begin
+                        if (tx_valid && flagb_q) begin
+                            data_q <= tx_data;
+                            wr_q <= 0;
+                            state <= WRITE_GUARD;
+                        end
+                    end
+                    WRITE_GUARD: begin
+                        state <= WRITE;
+                    end
+                    default: begin
+                        state <= SETTLE;
+                    end
+                endcase
+            end
+        end
+    end
+endmodule

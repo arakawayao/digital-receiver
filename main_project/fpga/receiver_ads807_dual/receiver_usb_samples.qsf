@@ -1,0 +1,4 @@
+source receiver_ads807_dual.qsf
+set_parameter -name USB_REPLAY 2
+set_global_assignment -name SDC_FILE receiver_usb_samples.sdc
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ../../../.harness/receiver_ads807_dual/usb_samples/quartus

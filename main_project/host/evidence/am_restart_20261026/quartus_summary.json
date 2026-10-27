@@ -1,0 +1,25 @@
+{
+  "adc_rate_hz": 43500000,
+  "adc_pins": "all_12_data_otr_and_clock_assigned",
+  "steps": {
+    "map": 0,
+    "fit": 0,
+    "sta": 0
+  },
+  "constrained_corner_slacks_ns": {
+    "receiver_ads807_dual_corner1_hold": 0.345,
+    "receiver_ads807_dual_corner1_recovery": 14.429,
+    "receiver_ads807_dual_corner1_removal": 1.148,
+    "receiver_ads807_dual_corner1_setup": 1.196,
+    "receiver_ads807_dual_corner2_hold": 0.33,
+    "receiver_ads807_dual_corner2_recovery": 15.003,
+    "receiver_ads807_dual_corner2_removal": 1.052,
+    "receiver_ads807_dual_corner2_setup": 1.61,
+    "receiver_ads807_dual_corner3_hold": 0.103,
+    "receiver_ads807_dual_corner3_recovery": 19.075,
+    "receiver_ads807_dual_corner3_removal": 0.488,
+    "receiver_ads807_dual_corner3_setup": 2.985
+  },
+  "constrained_timing_pass": true,
+  "board_timing": "not signed off: no ADC/PCB I/O timing constraints"
+}

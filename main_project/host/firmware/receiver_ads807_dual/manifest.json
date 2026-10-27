@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-26",
+  "fpga_device": "EP4CE6F17C8",
+  "toolchain": "Quartus Prime 18.1.0 Build 625",
+  "protocol": "TCM1 v2 / TRI1 v1",
+  "adc_rate_hz": 43500000,
+  "iq_rate_hz": 500000,
+  "source_project": "main_project/fpga/receiver_ads807_dual",
+  "source_owner": "FPGA maintainer; full rebuild sources are maintained separately",
+  "hardware_revalidated_during_migration": false,
+  "firmware": [
+    {
+      "source": ".harness/receiver_ads807_dual/quartus/receiver_ads807_dual.sof",
+      "target": "firmware/receiver_ads807_dual/receiver_ads807_dual.sof",
+      "sha256": "85524982f44c1a77ede67030c1bdda9855625c77adc856cd8e58b6e9c2583500",
+      "protocol": "TCM1 v2 / TRI1 v1",
+      "built_at": "2026-10-26 13:29:43",
+      "purpose": "Production ADC dual-mode firmware with AM auto-reacquire RTL fix; map/fit/STA/assembler passed, hardware test pending"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/quartus/receiver_usb_samples.sof",
+      "target": "firmware/receiver_ads807_dual/usb_samples/receiver_usb_samples.sof",
+      "sha256": "9401ed2a079bae3a6bf46cbaab408a1b11c9d3e879a5891d2b44409a3e05b477",
+      "protocol": "TCM1 v1 / TRI1 v1; incompatible with current v2 host",
+      "purpose": "Dedicated ADC12 RAM sample test; not production ADC firmware"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/quartus/receiver_usb_samples_auto.sof",
+      "target": "firmware/receiver_ads807_dual/usb_samples/receiver_usb_samples_auto.sof",
+      "sha256": "1f5651ea23d8d32467d4037f3d4e22e4a988a64eecd8a6c332fd7ecf8377123b",
+      "protocol": "TCM1 v1 / TRI1 v1; incompatible with current v2 host",
+      "purpose": "Dedicated ADC12 RAM sample test; not production ADC firmware"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/build/summary.json",
+      "target": "firmware/receiver_ads807_dual/usb_samples/build/summary.json",
+      "sha256": "603c737d52c043cd86ae60f48e65b5f1721926e8f724d0a52946813d590a0a8a",
+      "purpose": "Dedicated ADC12 RAM sample test; not production ADC firmware"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/build_auto/summary.json",
+      "target": "firmware/receiver_ads807_dual/usb_samples/build_auto/summary.json",
+      "sha256": "c9aa4393fa965f16f6699864fbfd4777c997a07c418c7c6b4c665cad94d674c0",
+      "purpose": "Dedicated ADC12 RAM sample test; not production ADC firmware"
+    }
+  ],
+  "limits": [
+    "Current primary SOF and host use TCM1 v2; historical board evidence and RAM test SOFs use v1",
+    "Physical ADC/RF/audio not verified during migration",
+    "RAM sample test matrix has unresolved STOP ACK timeout",
+    "Check manifest, SOF hash and board state with FPGA maintainer before programming"
+  ]
+}

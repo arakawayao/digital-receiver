@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "frames": 107,
+  "iq_frames": 89,
+  "ack_frames": 18,
+  "samples": 8835,
+  "decoder": "host.ads807.protocol.Decoder",
+  "source": "Actual Intel IP / FX2 pin simulation",
+  "usb_tested": false
+}

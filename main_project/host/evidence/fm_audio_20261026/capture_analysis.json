@@ -1,0 +1,340 @@
+{
+  "scope": "Offline analysis of real 103.7 MHz captures; no fresh USB/RF/speaker test; 93.4 MHz not captured",
+  "captures": [
+    {
+      "capture": "capture_20261026_164238_735271",
+      "source_sha256": "6be0677b7159aebcec8c1ad8e146e9d1e720046672ddcbed29725aae5ebfbeef",
+      "rf_hz": 103700000,
+      "deemphasis_us": 0,
+      "iq_seconds": 3.976484,
+      "index_breaks": 0,
+      "classification_40ms": {
+        "FM": 99
+      },
+      "audio_zero_fraction": 0.005029548598013328,
+      "audio_rms": 0.3254014253616333,
+      "peaks_hz": [
+        196.2890625,
+        329.58984375,
+        200.68359375,
+        131.8359375,
+        260.7421875,
+        227.05078125
+      ],
+      "energy_fraction": {
+        "40_80_Hz": 0.003221726045012474,
+        "80_120_Hz": 0.0011579586425796151,
+        "120_400_Hz": 0.6629190444946289,
+        "400_3000_Hz": 0.06259673088788986,
+        "3000_15000_Hz": 0.2697315514087677
+      },
+      "transport_crc": 0,
+      "transport_sequence_gaps": 0,
+      "iq_epochs": [
+        32
+      ],
+      "integrity": {
+        "frames": 106621,
+        "bytes": 54589952,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "source_queue_dropped_bytes": 0,
+        "dsp_queue_dropped_bytes": 0,
+        "queue_depth": 0,
+        "queue_capacity": 128,
+        "dsp_queue_depth": 0,
+        "dsp_queue_capacity": 512,
+        "dsp_dropped_samples": 0,
+        "audio_underruns": 1816,
+        "audio_overruns": 999,
+        "audio_device_errors": 2,
+        "audio_startup_silence_frames": 88233600,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 48.73399999999674,
+        "last_valid_age_s": 24.82799999997951,
+        "decoder_message": "",
+        "epoch": 32,
+        "source": "USB",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "dsp": {
+            "calls": 587,
+            "wall_s": 5.315926599898376,
+            "cpu_s": 3.21875,
+            "max_wall_ms": 68.74199997400865
+          },
+          "decode": {
+            "calls": 1669,
+            "wall_s": 1.737090599955991,
+            "cpu_s": 0.625,
+            "max_wall_ms": 13.240600004792213
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": {
+          "read_calls": 106621,
+          "max_read_ms": 18.1922,
+          "submit_gaps_over_512_us": 3,
+          "submit_gaps_over_1024_us": 2,
+          "write_calls": 203,
+          "max_write_ms": 6.586299976333976,
+          "clock": "Stopwatch",
+          "clock_resolution_s": 1e-07,
+          "recent_reads": [],
+          "managed_queue_dropped_bytes": 0,
+          "managed_queue_depth": 0,
+          "managed_error": "",
+          "queued_usb_requests": 128,
+          "max_requeue_ms": 1.2011
+        },
+        "tuning": {
+          "message": "手动调谐 / 信号可信",
+          "mode": 2,
+          "tuned_rf": 103700000,
+          "flags": 4098,
+          "epoch": 33,
+          "config_id": 11,
+          "estimated_rf": 0,
+          "commands": 203,
+          "error": ""
+        }
+      },
+      "counter_note": "Captured by old process; audio counters may span earlier sessions. Saved after Stop."
+    },
+    {
+      "capture": "capture_20261026_165140_813586",
+      "source_sha256": "a067e08700d39b4c59bb148a2124917b94c8b4f9f056b3e844f206aad5e8517f",
+      "rf_hz": 103700000,
+      "deemphasis_us": 75,
+      "iq_seconds": 4.015252,
+      "index_breaks": 0,
+      "classification_40ms": {
+        "FM": 100
+      },
+      "audio_zero_fraction": 0.0,
+      "audio_rms": 0.210199773311615,
+      "peaks_hz": [
+        130.37109375,
+        391.11328125,
+        260.7421875,
+        329.58984375,
+        232.91015625,
+        461.42578125
+      ],
+      "energy_fraction": {
+        "40_80_Hz": 0.010173048824071884,
+        "80_120_Hz": 0.0020157662220299244,
+        "120_400_Hz": 0.20668086409568787,
+        "400_3000_Hz": 0.7077191472053528,
+        "3000_15000_Hz": 0.07320445030927658
+      },
+      "transport_crc": 0,
+      "transport_sequence_gaps": 0,
+      "iq_epochs": [
+        59
+      ],
+      "integrity": {
+        "frames": 31025,
+        "bytes": 15884800,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "source_queue_dropped_bytes": 0,
+        "dsp_queue_dropped_bytes": 0,
+        "queue_depth": 0,
+        "queue_capacity": 128,
+        "dsp_queue_depth": 3,
+        "dsp_queue_capacity": 512,
+        "dsp_dropped_samples": 0,
+        "audio_underruns": 2076,
+        "audio_overruns": 999,
+        "audio_device_errors": 2,
+        "audio_startup_silence_frames": 104831040,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 10.73399999999674,
+        "last_valid_age_s": 3.6089999999967404,
+        "decoder_message": "",
+        "epoch": 59,
+        "source": "USB",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "dsp": {
+            "calls": 170,
+            "wall_s": 1.6477699999231845,
+            "cpu_s": 0.875,
+            "max_wall_ms": 47.3651000065729
+          },
+          "decode": {
+            "calls": 488,
+            "wall_s": 0.5104554003337398,
+            "cpu_s": 0.078125,
+            "max_wall_ms": 11.103700031526387
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": {
+          "read_calls": 31025,
+          "max_read_ms": 17.550900000000002,
+          "submit_gaps_over_512_us": 3,
+          "submit_gaps_over_1024_us": 2,
+          "write_calls": 63,
+          "max_write_ms": 0.4186999867670238,
+          "clock": "Stopwatch",
+          "clock_resolution_s": 1e-07,
+          "recent_reads": [],
+          "managed_queue_dropped_bytes": 0,
+          "managed_queue_depth": 0,
+          "managed_error": "",
+          "queued_usb_requests": 128,
+          "max_requeue_ms": 1.1344
+        },
+        "tuning": {
+          "message": "手动调谐 / 信号可信",
+          "mode": 2,
+          "tuned_rf": 103700000,
+          "flags": 4098,
+          "epoch": 60,
+          "config_id": 20,
+          "estimated_rf": 0,
+          "commands": 63,
+          "error": ""
+        }
+      },
+      "counter_note": "Captured by old process; audio counters may span earlier sessions. Saved after Stop."
+    },
+    {
+      "capture": "capture_20261026_165226_885213",
+      "source_sha256": "193375f1107f093a7ee35228544d5e2e65a1bd4e20c9a279ef7184fe67e3c1ba",
+      "rf_hz": 103700000,
+      "deemphasis_us": 50,
+      "iq_seconds": 4.015926,
+      "index_breaks": 0,
+      "classification_40ms": {
+        "FM": 100
+      },
+      "audio_zero_fraction": 0.0,
+      "audio_rms": 0.22351890802383423,
+      "peaks_hz": [
+        155.2734375,
+        174.31640625,
+        86.42578125,
+        351.5625,
+        832.03125,
+        310.546875
+      ],
+      "energy_fraction": {
+        "40_80_Hz": 0.019618917256593704,
+        "80_120_Hz": 0.06478865444660187,
+        "120_400_Hz": 0.49325358867645264,
+        "400_3000_Hz": 0.3917951285839081,
+        "3000_15000_Hz": 0.030410101637244225
+      },
+      "transport_crc": 0,
+      "transport_sequence_gaps": 0,
+      "iq_epochs": [
+        62
+      ],
+      "integrity": {
+        "frames": 141845,
+        "bytes": 72624640,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "discarded_bytes": 0,
+        "continuity_gaps": 0,
+        "missing_samples": 0,
+        "epoch_changes": 0,
+        "index_wraps": 0,
+        "clipped_frames": 0,
+        "fpga_dropped": 0,
+        "queue_dropped_bytes": 0,
+        "source_queue_dropped_bytes": 0,
+        "dsp_queue_dropped_bytes": 0,
+        "queue_depth": 0,
+        "queue_capacity": 128,
+        "dsp_queue_depth": 1,
+        "dsp_queue_capacity": 512,
+        "dsp_dropped_samples": 0,
+        "audio_underruns": 2082,
+        "audio_overruns": 999,
+        "audio_device_errors": 2,
+        "audio_startup_silence_frames": 105536640,
+        "audio_buffer_ms": 0.0,
+        "elapsed_s": 39.85999999998603,
+        "last_valid_age_s": 8.21899999998277,
+        "decoder_message": "",
+        "epoch": 62,
+        "source": "USB",
+        "source_error": "",
+        "processing_error": "",
+        "analysis_interval_s": 0.1,
+        "processing_timing": {
+          "dsp": {
+            "calls": 782,
+            "wall_s": 7.951346099609509,
+            "cpu_s": 4.28125,
+            "max_wall_ms": 57.16910003684461
+          },
+          "decode": {
+            "calls": 2220,
+            "wall_s": 2.3188383994274773,
+            "cpu_s": 0.84375,
+            "max_wall_ms": 12.628600001335144
+          }
+        },
+        "transport_gaps": 0,
+        "usb_timing": {
+          "read_calls": 141845,
+          "max_read_ms": 17.5941,
+          "submit_gaps_over_512_us": 4,
+          "submit_gaps_over_1024_us": 0,
+          "write_calls": 261,
+          "max_write_ms": 9.270900045521557,
+          "clock": "Stopwatch",
+          "clock_resolution_s": 1e-07,
+          "recent_reads": [],
+          "managed_queue_dropped_bytes": 0,
+          "managed_queue_depth": 0,
+          "managed_error": "",
+          "queued_usb_requests": 128,
+          "max_requeue_ms": 0.9011
+        },
+        "tuning": {
+          "message": "手动调谐 / 信号可信",
+          "mode": 2,
+          "tuned_rf": 103700000,
+          "flags": 4098,
+          "epoch": 63,
+          "config_id": 21,
+          "estimated_rf": 0,
+          "commands": 261,
+          "error": ""
+        }
+      },
+      "counter_note": "Captured by old process; audio counters may span earlier sessions. Saved after Stop."
+    }
+  ],
+  "validation": {
+    "host_pytest_passed": 143,
+    "synthetic_jitter": "40 ms buffer underruns; 120 ms prebuffer no underruns for deterministic 60 ms delivery stalls",
+    "hardware_retest": false
+  }
+}

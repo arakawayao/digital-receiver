@@ -1,0 +1,2 @@
+source receiver_usb_samples.qsf
+set_parameter -name USB_REPLAY 1

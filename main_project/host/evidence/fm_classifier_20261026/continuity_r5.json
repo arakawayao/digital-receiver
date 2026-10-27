@@ -1,0 +1,179 @@
+{
+  "scope": "all saved 40 ms blocks analysed; live rate-limited scheduling may differ",
+  "hardware_retest": false,
+  "physical_audio_tested": false,
+  "captures": [
+    {
+      "capture": "capture_20261026_164238_735271",
+      "rf_hz": 103700000,
+      "raw_candidates": {
+        "FM": 99
+      },
+      "r4_demod_kinds": {
+        "未知": 2,
+        "FM": 97
+      },
+      "r5_demod_kinds": {
+        "未知": 2,
+        "FM": 97
+      },
+      "held": [],
+      "r4_audio_zero_fraction": 0.025252525252525252,
+      "r5_audio_zero_fraction": 0.025252525252525252,
+      "classification": {
+        "confirmed": "FM",
+        "candidate": "FM",
+        "candidate_count": 99,
+        "held_analyses": 0
+      }
+    },
+    {
+      "capture": "capture_20261026_165140_813586",
+      "rf_hz": 103700000,
+      "raw_candidates": {
+        "FM": 100
+      },
+      "r4_demod_kinds": {
+        "未知": 2,
+        "FM": 98
+      },
+      "r5_demod_kinds": {
+        "未知": 2,
+        "FM": 98
+      },
+      "held": [],
+      "r4_audio_zero_fraction": 0.025,
+      "r5_audio_zero_fraction": 0.025,
+      "classification": {
+        "confirmed": "FM",
+        "candidate": "FM",
+        "candidate_count": 100,
+        "held_analyses": 0
+      }
+    },
+    {
+      "capture": "capture_20261026_165226_885213",
+      "rf_hz": 103700000,
+      "raw_candidates": {
+        "FM": 100
+      },
+      "r4_demod_kinds": {
+        "未知": 2,
+        "FM": 98
+      },
+      "r5_demod_kinds": {
+        "未知": 2,
+        "FM": 98
+      },
+      "held": [],
+      "r4_audio_zero_fraction": 0.025,
+      "r5_audio_zero_fraction": 0.025,
+      "classification": {
+        "confirmed": "FM",
+        "candidate": "FM",
+        "candidate_count": 100,
+        "held_analyses": 0
+      }
+    },
+    {
+      "capture": "capture_20261026_181810_278439",
+      "rf_hz": 93400000,
+      "raw_candidates": {
+        "FM": 22
+      },
+      "r4_demod_kinds": {
+        "未知": 2,
+        "FM": 20
+      },
+      "r5_demod_kinds": {
+        "未知": 2,
+        "FM": 20
+      },
+      "held": [],
+      "r4_audio_zero_fraction": 0.11363636363636363,
+      "r5_audio_zero_fraction": 0.11363636363636363,
+      "classification": {
+        "confirmed": "FM",
+        "candidate": "FM",
+        "candidate_count": 22,
+        "held_analyses": 0
+      }
+    },
+    {
+      "capture": "capture_20261026_183124_208967",
+      "rf_hz": 105700000,
+      "raw_candidates": {
+        "FM": 74
+      },
+      "r4_demod_kinds": {
+        "未知": 2,
+        "FM": 72
+      },
+      "r5_demod_kinds": {
+        "未知": 2,
+        "FM": 72
+      },
+      "held": [],
+      "r4_audio_zero_fraction": 0.033783783783783786,
+      "r5_audio_zero_fraction": 0.033783783783783786,
+      "classification": {
+        "confirmed": "FM",
+        "candidate": "FM",
+        "candidate_count": 74,
+        "held_analyses": 0
+      }
+    },
+    {
+      "capture": "capture_20261026_183146_097221",
+      "rf_hz": 90900000,
+      "raw_candidates": {
+        "FM": 29,
+        "AM": 1
+      },
+      "r4_demod_kinds": {
+        "未知": 3,
+        "FM": 27
+      },
+      "r5_demod_kinds": {
+        "未知": 2,
+        "FM": 28
+      },
+      "held": [
+        {
+          "start_sample": 220000,
+          "reason": "候选 AM 1/3；保持 FM 解调，参数待确认"
+        }
+      ],
+      "r4_audio_zero_fraction": 0.13333333333333333,
+      "r5_audio_zero_fraction": 0.08333333333333333,
+      "classification": {
+        "confirmed": "FM",
+        "candidate": "FM",
+        "candidate_count": 18,
+        "held_analyses": 1
+      }
+    },
+    {
+      "capture": "capture_20261026_183159_811496",
+      "rf_hz": 98100000,
+      "raw_candidates": {
+        "未知": 52
+      },
+      "r4_demod_kinds": {
+        "未知": 52
+      },
+      "r5_demod_kinds": {
+        "未知": 52
+      },
+      "held": [],
+      "r4_audio_zero_fraction": 1.0,
+      "r5_audio_zero_fraction": 1.0,
+      "classification": {
+        "confirmed": "未知",
+        "candidate": "未知",
+        "candidate_count": 52,
+        "held_analyses": 0
+      }
+    }
+  ]
+}

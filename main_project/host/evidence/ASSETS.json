@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-20",
+  "scope": "Copies of historical evidence and existing SOF inputs, not new hardware validation",
+  "assets": [
+    {
+      "source": ".harness/receiver_ads807_dual/simulation/host_crosscheck.json",
+      "target": "evidence/rtl_host_crosscheck.json",
+      "sha256": "3f04f4520a57253662f81e4fd0e44de800344a4aa66b548f09d5496a465c5a2b"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/board_control/20261020_162353/result.json",
+      "target": "evidence/board_control_20261020_162353.json",
+      "sha256": "6e7958fffc4494ee743c56a1d0ed7c94274b110ac7902efd80be26e2bb5ed956"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/board/20261020_182443/result.json",
+      "target": "evidence/usb_samples_20261020_182443.json",
+      "sha256": "f108cb436f7ecc786854f5dd46c4ba3d38ad06e631bae6e0dd6e43402ee4d144"
+    },
+    {
+      "source": "host/.harness/ads807_host/dual_new_tests.xml",
+      "target": "evidence/dual_new_tests.xml",
+      "sha256": "fbe482b000a851523d4fb0a2c016338f40184b79b77ecaa6e4cec9cf012d57d7"
+    },
+    {
+      "source": "host/.harness/ads807_host/dual_verification/result.json",
+      "target": "evidence/dual_verification.json",
+      "sha256": "c7e715cc47bc5e5966ef7385643b5a75aa72d986af45abb5251efa2d5c031a2e"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/quartus/receiver_ads807_dual.sof",
+      "target": "firmware/receiver_ads807_dual/receiver_ads807_dual.sof",
+      "sha256": "1fa7167bb0d74f7ce7feb300d4267057a0f8b1f69a63e0f61bae6830942acc12"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/quartus/receiver_usb_samples.sof",
+      "target": "firmware/receiver_ads807_dual/usb_samples/receiver_usb_samples.sof",
+      "sha256": "9401ed2a079bae3a6bf46cbaab408a1b11c9d3e879a5891d2b44409a3e05b477"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/quartus/receiver_usb_samples_auto.sof",
+      "target": "firmware/receiver_ads807_dual/usb_samples/receiver_usb_samples_auto.sof",
+      "sha256": "1f5651ea23d8d32467d4037f3d4e22e4a988a64eecd8a6c332fd7ecf8377123b"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/build/summary.json",
+      "target": "firmware/receiver_ads807_dual/usb_samples/build/summary.json",
+      "sha256": "603c737d52c043cd86ae60f48e65b5f1721926e8f724d0a52946813d590a0a8a"
+    },
+    {
+      "source": ".harness/receiver_ads807_dual/usb_samples/build_auto/summary.json",
+      "target": "firmware/receiver_ads807_dual/usb_samples/build_auto/summary.json",
+      "sha256": "c9aa4393fa965f16f6699864fbfd4777c997a07c418c7c6b4c665cad94d674c0"
+    }
+  ]
+}

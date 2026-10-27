@@ -1,0 +1,37 @@
+{
+  "note": "INT integration proposal only; not installed into the shared harness/tasks.json",
+  "tasks": [
+    {
+      "id": "receiver-modelsim-tests",
+      "description": "ModelSim actual IP, fixed-point DSP, USB protocol and receiver top simulation",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/simulate.py"],
+      "writes": [".harness/receiver/sim/"],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "receiver-full-chain-tests",
+      "description": "ModelSim actual receiver_top/IP: AM/FM ADC to USB, EP6 tuning, overflow/gap/partial-frame recovery and numeric CRC comparison",
+      "depends_on": ["receiver-modelsim-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/full_chain.py"],
+      "writes": [".harness/receiver/full_chain/"],
+      "timeout_seconds": 1500
+    },
+    {
+      "id": "receiver-quartus32",
+      "description": "Quartus 32 MHz map/fit/corner STA; external ADC pins are virtual",
+      "depends_on": ["receiver-full-chain-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/build.py", "--rate", "32"],
+      "writes": ["main_project/fpga/receiver/", ".harness/receiver/build/"],
+      "timeout_seconds": 900
+    },
+    {
+      "id": "receiver-quartus40",
+      "description": "Quartus 40 MHz map/fit/corner STA; shared DB requires serialization",
+      "depends_on": ["receiver-quartus32"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/build.py", "--rate", "40"],
+      "writes": ["main_project/fpga/receiver/", ".harness/receiver/build/"],
+      "timeout_seconds": 900
+    }
+  ]
+}

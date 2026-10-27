@@ -1,0 +1,317 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "ads807-am-restart-rtl",
+      "description": "Actual FPGA estimator/control regression: continuous 50% AM STOP/retune/start, rejection cases and baseline frequency tests; no USB or programming",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/host/tests/fpga/run_am_restart.py", "--rtl-root", "main_project/fpga/receiver_ads807_dual"],
+      "writes": ["main_project/host/.harness/am_restart_validation/"],
+      "timeout_seconds": 300
+    },
+    {
+      "id": "ads807-dual-control-tests",
+      "description": "Offline dual control ACK, sequence, CRC and timeout checks; no USB access or programming",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "pytest", "main_project/host/tests/ads807/test_dual_control.py", "-q", "-p", "no:cacheprovider", "--basetemp", "main_project/host/.harness/ads807_host/pytest_dual_control"],
+      "writes": ["main_project/host/.harness/ads807_host/pytest_dual_control/"],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "receiver-ads807-dual-style",
+      "description": "Two-mode hand-written HDL line declaration and assignment contract",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/check_style.py"],
+      "writes": [],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "receiver-ads807-dual-cic-ip",
+      "description": "Intel CIC R87 Hogenauer model, full-scale, impulse, random data and valid gaps; no hardware access",
+      "depends_on": ["receiver-ads807-dual-style"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/cic_ip.py", "--pruned", "--skip-generate", "--simulate", "--installed"],
+      "writes": [".harness/receiver_ads807_dual/cic_ip/"],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "receiver-ads807-dual-fir-ip-evaluation",
+      "description": "Isolated FIR II generation, bit-exact I/Q/reset warmup checks and EP4CE6 legacy/IP map-fit-STA comparison; no receiver integration or programming",
+      "depends_on": ["receiver-ads807-dual-style"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/fir_ip.py", "--simulate", "--synthesize"],
+      "writes": [".harness/receiver_ads807_dual/fir_ip/"],
+      "timeout_seconds": 1800
+    },
+    {
+      "id": "receiver-ads807-dual-reference",
+      "description": "ADS807 capture/NCO, Intel pruned CIC and FIR versus independent fixed-point models",
+      "depends_on": ["receiver-ads807-dual-cic-ip"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/dsp_reference.py"],
+      "writes": [".harness/receiver_ads807_dual/reference/"],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "receiver-ads807-dual-simulation",
+      "description": "Two-mode ADC to actual Intel FIFO and FX2 pins; manual tuning, holdover, CRC, metadata and overflow",
+      "depends_on": ["receiver-ads807-dual-reference", "ads807-host-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/simulate.py"],
+      "writes": [".harness/receiver_ads807_dual/simulation/"],
+      "timeout_seconds": 1500
+    },
+    {
+      "id": "receiver-ads807-dual-host-crosscheck",
+      "description": "Production GUI decoder consumes actual two-mode FX2 RTL bytes with arbitrary chunking",
+      "depends_on": ["receiver-ads807-dual-simulation"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/host_check.py"],
+      "writes": [".harness/receiver_ads807_dual/simulation/host_crosscheck.json"],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "receiver-ads807-dual-quartus",
+      "description": "EP4CE6F17C8 two-mode map, fit and multicorner STA; virtual ADC, no programming",
+      "depends_on": ["receiver-ads807-dual-host-crosscheck"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_dual/scripts/build.py"],
+      "writes": ["main_project/fpga/receiver_ads807_dual/", ".harness/receiver_ads807_dual/build/", ".harness/receiver_ads807_dual/quartus/"],
+      "timeout_seconds": 2700
+    },
+    {
+      "id": "tri-board-build-auto",
+      "description": "Build fixed host-auto EP4CE6 TRI1 ROM cases; no USB access or programming",
+      "depends_on": ["receiver-replay-host-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/tri_replay_build.py", "--mode", "auto"],
+      "writes": [".harness/tri_board_test/auto/"],
+      "timeout_seconds": 1200
+    },
+    {
+      "id": "tri-board-build-manual",
+      "description": "Build fixed manual EP4CE6 TRI1 ROM cases; no USB access or programming",
+      "depends_on": ["receiver-replay-host-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/tri_replay_build.py", "--mode", "manual"],
+      "writes": [".harness/tri_board_test/manual/"],
+      "timeout_seconds": 1200
+    },
+    {
+      "id": "tri-board-build-fpga",
+      "description": "Prepare autonomous RPL1 cases from verified replay SOF; no USB access or programming",
+      "depends_on": ["receiver-replay-build"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/tri_replay_build.py", "--mode", "fpga"],
+      "writes": [".harness/tri_board_test/fpga/"],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "tri-board-check-auto",
+      "description": "Intel IP and delayed FX2 simulation: ROM, ADC snapshot, DSP, TRI1 payload and small FM measurement",
+      "depends_on": ["tri-board-build-auto"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/tri_replay_check.py", "auto"],
+      "writes": [".harness/tri_board_test/auto/"],
+      "timeout_seconds": 1200
+    },
+    {
+      "id": "tri-board-check-manual",
+      "description": "Intel IP and delayed FX2 simulation for fixed manual ROM replay",
+      "depends_on": ["tri-board-build-manual"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/tri_replay_check.py", "manual"],
+      "writes": [".harness/tri_board_test/manual/"],
+      "timeout_seconds": 1200
+    },
+    {
+      "id": "tri-board-offline-ready",
+      "description": "Validate 12 SOF/test manifests and publish plan; never opens USB or programs FPGA",
+      "depends_on": ["tri-board-check-auto", "tri-board-check-manual", "tri-board-build-fpga", "ads807-host-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/tri_replay_ready.py"],
+      "writes": [".harness/tri_board_test/ready.json", ".harness/tri_board_test/ready.tmp"],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "receiver-replay-host-tests",
+      "description": "43.5 MHz replay decoder, measurements, continuous bounded monitor and disconnect cleanup; requires NumPy/SciPy",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "unittest", "discover", "-s", "main_project/fpga/receiver_ads807/tests", "-p", "test_replay.py", "-v"],
+      "writes": [],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "receiver-replay-am",
+      "description": "Intel IP/FX2 pin simulation: AM upload, RAM replay, IQ payload and production classifier",
+      "depends_on": ["receiver-replay-host-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/replay_check.py", "am"],
+      "writes": [".harness/receiver_replay/am/"],
+      "timeout_seconds": 1500
+    },
+    {
+      "id": "receiver-replay-fm",
+      "description": "Intel IP/FX2 pin simulation: FM upload, RAM replay, IQ payload and production classifier",
+      "depends_on": ["receiver-replay-host-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/replay_check.py", "fm"],
+      "writes": [".harness/receiver_replay/fm/"],
+      "timeout_seconds": 1500
+    },
+    {
+      "id": "receiver-replay-build",
+      "description": "Compile EP4CE6F17C8 replay SOF and verify device/PLL/multicorner STA; no programming",
+      "depends_on": ["receiver-replay-am", "receiver-replay-fm"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/replay_build.py"],
+      "writes": ["main_project/fpga/receiver_ads807/", ".harness/receiver_replay/build.log", ".harness/receiver_replay/build.json", ".harness/receiver_replay/quartus/"],
+      "timeout_seconds": 1200
+    },
+    {
+      "id": "ads807-managed-pump-build",
+      "description": "Compile GUI Windows .NET/Cypress receive worker; no hardware access",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/host/ads807/build_usb_pump.py"],
+      "writes": ["main_project/host/.harness/ads807_host/managed/"],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "ads807-host-portable-build",
+      "description": "Build Windows x64 standalone host, load packaged native and managed libraries, verify synthetic GUI without USB or speakers; requires host build tools and Cypress SDK",
+      "depends_on": ["ads807-host-tests"],
+      "command": ["{python}", "-B", "main_project/host/tools/build_windows.py"],
+      "writes": ["main_project/host/.harness/releases/", "main_project/host/.harness/pyinstaller_cache/", "main_project/host/.harness/ads807_host/managed/"],
+      "timeout_seconds": 900
+    },
+    {
+      "id": "ads807-host-tests",
+      "description": "PyQt6 TRI1/TCM1 two-mode GUI, protocol, DSP, records and duplex firmware-model tests; requires ads807_host dependencies",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "pytest", "main_project/host/tests", "-q", "-p", "no:cacheprovider", "--basetemp", "main_project/host/.harness/ads807_host/pytest", "--junitxml", "main_project/host/.harness/ads807_host/tests.xml"],
+      "writes": ["main_project/host/.harness/ads807_host/pytest/", "main_project/host/.harness/ads807_host/tests.xml"],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "ads807-host-offline-verification",
+      "description": "Synthetic AM/FM/noise/silence to the actual Qt GUI and capture screenshots; no USB or physical audio",
+      "depends_on": ["ads807-host-tests"],
+      "command": ["{python}", "-B", "-m", "main_project.host.ads807.verify", "--output", "main_project/host/.harness/ads807_host/verification"],
+      "writes": ["main_project/host/.harness/ads807_host/verification/"],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "receiver-ads807-tri-style",
+      "description": "Check tri-mode hand-written HDL one-declaration/assignment-per-line contract",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_tri/scripts/check_style.py"],
+      "writes": [],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "receiver-ads807-tri-reference",
+      "description": "ADS807 43.5 MHz PLL, ADC, estimator and exact 261046-cycle DSP reference",
+      "depends_on": ["receiver-ads807-tri-style"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_tri/scripts/dsp_reference.py"],
+      "writes": [".harness/receiver_ads807_tri/reference/"],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "receiver-ads807-tri-host",
+      "description": "Host protocol, AM/FM/noise search, snapshot-to-tuning sessions; requires NumPy runtime",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_tri/scripts/host_check.py"],
+      "writes": [".harness/receiver_ads807_tri/host/"],
+      "timeout_seconds": 180
+    },
+    {
+      "id": "receiver-ads807-tri-simulation",
+      "description": "Three-mode real Intel IP/duplex FX2 chain, snapshots, CRC, metadata, holdover and FIFO overflow",
+      "depends_on": ["receiver-ads807-tri-reference", "receiver-ads807-tri-host"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_tri/scripts/simulate.py"],
+      "writes": [".harness/receiver_ads807_tri/simulation/"],
+      "timeout_seconds": 1500
+    },
+    {
+      "id": "receiver-ads807-tri-quartus",
+      "description": "Tri-mode Quartus 18.1 map/fit/multicorner STA; virtual ADC, no programming",
+      "depends_on": ["receiver-ads807-tri-simulation"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807_tri/scripts/build.py"],
+      "writes": ["main_project/fpga/receiver_ads807_tri/", ".harness/receiver_ads807_tri/build/", ".harness/receiver_ads807_tri/quartus/"],
+      "timeout_seconds": 2700
+    },
+    {
+      "id": "tri-fifo-budget",
+      "description": "ModelSim actual Intel 256/512-point FIFO capacity and recovery at 500 kS/s; no hardware access",
+      "depends_on": ["tri-board-build-auto"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver_ads807/scripts/fifo_budget_check.py"],
+      "writes": [".harness/tri_board_test/fifo_budget/"],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "receiver-frequency-tests",
+      "description": "ModelSim 56 MHz autonomous carrier estimation, no-signal rejection and reacquisition",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/frequency_check.py"],
+      "writes": [".harness/receiver/frequency/"],
+      "timeout_seconds": 300
+    },
+    {
+      "id": "receiver56-module-tests",
+      "description": "ModelSim actual 56 MHz PLL/IP, ADC, CIC/FIR integer reference and EP2 v2 transport",
+      "depends_on": [],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/simulate.py"],
+      "writes": [".harness/receiver/sim56/"],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "receiver56-realtime-tests",
+      "description": "ModelSim locked 56 MHz continuous ADC capture, fixed IQ cadence and normal USB zero loss with bounded backpressure",
+      "depends_on": ["receiver-frequency-tests", "receiver56-module-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/realtime_check.py"],
+      "writes": [".harness/receiver/realtime56/"],
+      "timeout_seconds": 1500
+    },
+    {
+      "id": "receiver56-full-chain-tests",
+      "description": "Unknown RF ADC to automatic FPGA DDC and USB payload/CRC, signal loss, hops and overflow",
+      "depends_on": ["receiver-frequency-tests", "receiver56-module-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/full_chain.py"],
+      "writes": [".harness/receiver/full_chain56/"],
+      "timeout_seconds": 2100
+    },
+    {
+      "id": "receiver56-quartus",
+      "description": "Quartus fixed56 map/fit/corner STA; ADC pins remain virtual, no programming",
+      "depends_on": ["receiver56-full-chain-tests", "receiver56-realtime-tests"],
+      "command": ["{python}", "-B", "main_project/fpga/receiver/scripts/build.py"],
+      "writes": ["main_project/fpga/receiver/", ".harness/receiver/build/"],
+      "timeout_seconds": 900
+    },
+    {
+      "id": "dialog-tests",
+      "description": "Check dialog execution, dependency selection, cancellation, lock handling and bounded logs",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_dialog.py", "-v"],
+      "writes": [],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "harness-tests",
+      "description": "Check scheduler dependencies, failures, concurrency and configuration validation",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_runner.py", "-v"],
+      "writes": [],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "iq-contract-tests",
+      "description": "Check offline IQ capture validation and serialization",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_iq_contract.py", "-v"],
+      "writes": [],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "signal-fixture-tests",
+      "description": "Check deterministic AM, FM and silence fixture properties",
+      "depends_on": [],
+      "command": ["{python}", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_signal_fixtures.py", "-v"],
+      "writes": [],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "generate-fixtures",
+      "description": "Generate offline captures after contract and signal checks pass",
+      "depends_on": ["iq-contract-tests", "signal-fixture-tests"],
+      "command": ["{python}", "-B", "-m", "reference.fixtures", "--output-dir", ".harness/fixtures"],
+      "writes": [".harness/fixtures/"],
+      "timeout_seconds": 60
+    }
+  ]
+}
